@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+
+<section style="background: url(static/images/havel1.jpg) center top no-repeat; background-size: cover;" class="bar no-mb color-white text-center bg-fixed relative-positioned">
+    <div class="dark-mask"></div>
+    <div class="container">
+      <div class="icon icon-outlined icon-lg"><i class="fa fa-file-code-o"></i></div>
+      <h2 class="text-uppercase">BITS MAGNET</h2>
+      <p class="lead">We are a very enthuaistic team which consists of 5 members. We are a great team of coders, developers. We have won many compettitons in bhopal. We also develop modular, extensible, readable code for our free-lancing clients.</p>
+    </div>
+</section>
+
+<section>
+    <div class="get-it">
+      <div class="container">
+        <div class="text-center">
+          <h3>Team Members</h3>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Team Members -->
+<section class="bar background-white">
+<div class="container text-center">
+  <div class="row">
+
+    {% for per in person %}
+      {% if per.is_member %}
+          <div class="col-lg-4 col-md-6">
+            <div class="box-simple">
+              <div class="icon-outlined"><img  src = "{{ per.profile_pic.url }}"></img></div>
+              <h3 class="h4">{{ per.name }}</h3>
+              <p>{{ per.desciption }} </p>
+            </div>
+          </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+<section>
+    <div class="get-it">
+        <div class="container">
+            <div class="text-center">
+                <h3 id = "awards">AWARDS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section style="background: url('static/images/photogrid.jpg') center center repeat; background-size: cover;" class="bar background-white relative-positioned">
+<div class="container">
+  <!-- Carousel Start-->
+  <div class="home-carousel">
+    <div class="dark-mask mask-primary"></div>
+    <div class="container">
+      <div class="homepage owl-carousel">
+        {% for award in awards %}
+          <div class="item">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h1>{{ award.title }}</h1>
+                <p> {{ award.description }} cfghjbklghjb klghjkljhgj bkljhgjbkljbhhbjjjkjkkkkkdhdddddddd dddddddddddj</p>
+                <h3>TEAM</h3>
+                <ul>
+                  {% for per in award.team.all %}
+                  <p>{{per.name}}</p>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- Carousel End-->
+</div>
+</section>
+
+
+{% endblock %}

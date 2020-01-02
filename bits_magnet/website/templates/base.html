@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+    <!-- Google fonts - Roboto-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+    <!-- Bootstrap Select-->
+    <link rel="stylesheet" href="{% static "css/bootstrap-select.min.css" %}">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.theme.default.css" %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static "css/style.default.css" %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static "css/custom.css" %}"/>
+    <!-- Favicon and apple touch icons-->
+</head>
+<body>
+    <!-- NAVBAR -->
+        <header class="nav-holder make-sticky">
+            <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+              <div class="container"><a href="#" class="navbar-brand home"><img src="{% static "images/logo.png" %}" alt="bits magnet" class="d-none d-md-inline-block">
+                  <img src="{% static "images/logo.png" %}" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+                <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+                <div id="navigation" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown active"><a href="#">Home <b class="caret"></b></a>
+                    </li>
+                                    <li class="nav-item "><a href="#awards">Awards <b class="caret"></b></a>
+                    </li>
+    <!-- Portfolio Start -->
+                    <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Portfolio <b class="caret"></b></a>
+                      <ul class="dropdown-menu megamenu">
+                                            <li class="nav-item"><a href="#" class="nav-link">Abhishek Anand</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Mrudul Sankhere</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Aditya Raj</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Sazid Mulla</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link">Sourav Patidar</a></li>
+                              </ul>
+                                </li>
+    <!-- Portfolio End -->
+                      <li class="nav-item "><a href="#">Projects <b class="caret"></b></a></li>
+                      <li class="nav-item "><a href="#contact">Contact Us <b class="caret"></b></a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </header>
+      <!-- Navbar End-->
+
+
+    <div class = "container">
+        {% block body_block %}
+        {% endblock %}
+    </div>
+    <!-- Javascript files-->
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"> </script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/jquery.cookie.js" %}"> </script>
+    <script src="{% static "js/jquery.counterup.min.js" %}"> </script>
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "js/owl.carousel2.thumbs.min.js" %}"></script>
+    <script src="{% static "js/jquery.parallax-1.1.3.js" %}"></script>
+    <script src="{% static "js/bootstrap-select.min.js" %}"></script>
+    <script src="{% static "js/jquery.scrollTo.min.js" %}"></script>
+    <script src="{% static "js/front.js" %}"></script>
+    <!-- FOOTER -->
+    <footer class = "main-footer">
+        <div class = "container" >
+          <h3 id = "contact" class="h3">Contact</h3>
+           <p class="text-uppercase"><strong>Bits Magnet</strong><br>302 Esteem Tower-1<br>Sector A Indrapuri<br>Bhopal 462021<br>India <br><strong>Mob-No: +91-7903473258, +91-9712031662</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
